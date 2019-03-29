@@ -17,3 +17,24 @@ header{
     font-size: 30px;
     margin: 0 auto;
 }
+
+
+
+
+
+
+#cart{
+    padding: 10px;
+    border: 2px solid rgb(0,200,200);
+    width: 600px;
+    margin: 0 auto;
+}
+
+#cart > select,
+#cart > select{
+    margin-right: 10px;
+}
+
+output{
+    font-weight: 700;
+}

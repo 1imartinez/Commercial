@@ -14,37 +14,53 @@
       <h1 class="title">Best Company Name (Flem Corp.)</h1>
     </header>
     <section class="container">
-      <form action="boot.html" method="GET" class="row">
+      <div class="row">
           <div class="col">
             <h3 class="title">Option A</h3>
             <p> 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?</p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
+            </p>
             <a class="price title" href="">$19.99</a>
           </div>
+
           <div class="col">
             <h3 class="title">Option B</h3>
             <p> 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?</p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
+            </p>
             <a class="price title" href="">$24.99</a>
           </div>
+
           <div class="col">
             <h3 class="title">Option C</h3>
             <p> 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?</p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
+            </p>
             <a class="price title" href="">$29.99</a>
-          </div>
-          <div id="cart" class="row">
-            <select name="options" id="options">
-              <option value="19.99">buy A</option>
-              <option value="24.99">buy B</option>
-              <option value="29.99">buy C</option>
-            </select>
-          </div>
+          </div>    
+      </div>
+      <form id="cart" class="row" method="GET" action="boot.html" oninput="calculate">
+        Option:
+        <select name="option" id="option">
+          <option value="19.99">A</option>
+          <option value="24.99">B</option>
+          <option value="29.99">C</option>
+        </select>
+        Months: <input id="time" type="number" value="12" mins="0">
+        Total: <output id="result" name="out" for="option time"></output>
       </form>
     </section>
 
+    <script>
+      function calculate(){
+        let doc = document;
+        let option = doc.getElementById("option");
+        let time = doc.getElementById("time");
+        let result = doc.getElementById("result");
 
-
+        result.value = "$" + parseInt(option.value) * parseInt(time.value)
+      }
+    </script>
 
     <!-- IMPORTED BOOTSTRAP CONTENT -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
