@@ -1,5 +1,5 @@
 header{
-    height: 100px;
+    height: 125px;
     background-color: rgb(0,200,200);
 }
 
@@ -24,17 +24,20 @@ header{
 
 
 #cart{
-    padding: 10px;
+    padding: 16px;
     border: 2px solid rgb(0,200,200);
     width: 600px;
     margin: 0 auto;
 }
 
 #cart > select,
-#cart > select{
-    margin-right: 10px;
+#cart > input,
+#cart > output{
+    width: 75px;
+    margin-right: 16px;
 }
 
 output{
     font-weight: 700;
+    width: 100px;
 }

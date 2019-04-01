@@ -15,7 +15,7 @@
     </header>
     <section class="container">
       <div class="row">
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option A</h3>
             <p> 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
@@ -23,7 +23,7 @@
             <a class="price title" href="">$19.99</a>
           </div>
 
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option B</h3>
             <p> 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
@@ -31,7 +31,7 @@
             <a class="price title" href="">$24.99</a>
           </div>
 
-          <div class="col">
+          <div class="col-12 col-sm-6 col-lg-4 option">
             <h3 class="title">Option C</h3>
             <p> 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi magnam quas optio ut corporis eum inventore, ipsam ab hic fugit sint harum, natus beatae voluptatem cupiditate quos quia perspiciatis omnis?
@@ -39,15 +39,16 @@
             <a class="price title" href="">$29.99</a>
           </div>    
       </div>
-      <form id="cart" class="row" method="GET" action="boot.html" oninput="calculate">
-        Option:
+      <form id="cart" class="row" method="GET" action="boot.html" oninput="calculate()">
+        Options:
         <select name="option" id="option">
           <option value="19.99">A</option>
           <option value="24.99">B</option>
           <option value="29.99">C</option>
         </select>
-        Months: <input id="time" type="number" value="12" mins="0">
+        Months: <input id="time"  name="time" type="number" value="12" mins="0">
         Total: <output id="result" name="out" for="option time"></output>
+        <input type="submit" value="Submit">
       </form>
     </section>
 
@@ -58,7 +59,7 @@
         let time = doc.getElementById("time");
         let result = doc.getElementById("result");
 
-        result.value = "$" + parseInt(option.value) * parseInt(time.value)
+        result.value = "$" + Number(parseFloat(option.value) * parseInt(time.value)).toPrecision(5);
       }
     </script>
 
