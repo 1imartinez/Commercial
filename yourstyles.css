@@ -17,6 +17,9 @@ header{
     font-size: 30px;
     margin: 0 auto;
 }
+html{
+    background-color: darkred;
+}
 
 
 

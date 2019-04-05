@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PAYMENT</title>
+    <title>Shipping</title>
     <!-- IMPORTED BOOTSTRAP CONTENT -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- YOUR CSS STYLES -->
@@ -14,31 +14,16 @@
     <header>
         <h1 class="title">Alpha Male</h1>
     </header>
-    <form class="container" action="confirmation.html" method="POST">
-        <div class="row">
-            <div class="col">
-                <h1>Shipping</h1>
-                <input type="text" name="name" value="your name"><br>
-                <input type="text" name="street" value="street name"><br>
-                <input type="text" name="apt #" value="Apt #"><br>
-                <input type="text" name="city" value="city"><br>
-                <input type="text" name="state" value="state"><br>
-                <input type="text" name="zip" value="zip"><br>
-            </div>
-            <div class="col">
-                <h1>Payment</h1>
-                Card:
-                <input type="text" name="card" value="xxxx-xxxx-xxxx-xxxx"><br>
-                CVV
-                <input type="text" name="CVV" value=""><br>
-                <input type="submit" value="Submit"><br>
-            </div>
-        </div>
-    </form>
+    <h2></h2>
+    <script>
+        let r = Math.floor(7 * Math.random() + 1);
+        let doc = document;
+        let h2 = doc.querySelector("h2");
+        h2.innerHTML ="Thanks for you purchase.Your package will arive in " + r +  " days";
+    </script>
 
 
 
-    
     <!-- IMPORTED BOOTSTRAP CONTENT -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
